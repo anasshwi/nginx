@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run -itd --name nginx -p 80:3000 anasshwi/nginx:latest
