@@ -9,7 +9,7 @@ pipeline {
 
     stage('build') {
       steps {
-        sh 'docker build -t nginx :$BUILD_ID .'
+        sh 'docker build -t nginx :$BUILD_ID '
       }
     }
 
@@ -24,9 +24,9 @@ pipeline {
 
     stage('push') {
       steps {
-        sh 'docker tag nginx:$BUILD_ID anasshwi/nginx:$BUILD_ID'
+        sh 'docker tag nginx :$BUILD_ID anasshwi/nginx :$BUILD_ID'
         sh 'docker login -u anasshwi -p Anas123456'
-        sh 'docker push anasshwi/nginx:$BUILD_ID'
+        sh 'docker push anasshwi/nginx :$BUILD_ID'
       }
     }
 
