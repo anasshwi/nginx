@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('checkout') {
       steps {
-        git(url: 'https://github.com/anasshwi/nginx', branch: 'main', changelog: true, poll: true)
+        git(url: 'https://github.com/anasshwi/nginx', branch: 'master', changelog: true, poll: true)
       }
     }
 
